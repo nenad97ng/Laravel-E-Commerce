@@ -7,13 +7,15 @@
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
         </div>
         <div class="carousel-inner">
-            @foreach ($products as $item)
+            @foreach ($products->take(5) as $item)
                    
           <div class="carousel-item {{$item['id']==1 ? 'active':''}}">
-            <img src="{{$item['gallery']}}" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
+            <img src="{{$item['gallery']}}" class="d-block slider-img">
+            <div class="carousel-caption d-none d-md-block slider-text">
               <h5>{{$item['name']}}</h5>
               <p>{{$item['description']}}</p>
             </div>
