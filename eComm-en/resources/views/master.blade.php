@@ -46,6 +46,13 @@
     .detail-img{
         height: 200px;
     }
+    .search-box{
+        width: 500px !important;
+    }
+    .footer-bottom{
+        position: relative;
+        bottom: 0;
+    }
 </style>
 
 </html>
