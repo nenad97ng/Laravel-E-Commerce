@@ -51,7 +51,9 @@
     }
     .footer-bottom{
         position: relative;
+        top: 200px;
         bottom: 0;
+        height: 100px;
     }
 </style>
 

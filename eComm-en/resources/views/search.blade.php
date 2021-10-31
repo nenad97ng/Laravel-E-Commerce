@@ -1,6 +1,6 @@
 @extends('master')
 @section("content")
-<div class="container custom-product">
+<div class="container">
     <div class="col-sm-4">
         <a href="#">Filter</a>
     </div>
@@ -20,7 +20,6 @@
             @endforeach
             </div>
         </div> 
-    
+      </div>
 
 @endsection
-</div>
