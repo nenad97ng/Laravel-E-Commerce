@@ -1,11 +1,14 @@
 <?php
 use App\Http\Controllers\ProductController;
-$total= ProductController::cartItem();
-
+$total=0;
+if(Session::has('user'))
+{
+  $total= ProductController::cartItem();
+}
 ?>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Brand</a>
+    <a class="navbar-brand" href="/">E-Comm</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -26,7 +29,26 @@ $total= ProductController::cartItem();
         <li class="nav-item">
       <a class="nav-link" href="#">Cart({{$total}})</a>
         </li>
+        @if (Session::has('user'))
+    
+        <li>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          {{Session::get('user')['name']}}
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="/logout">Logout</a></li>
+          </ul>
+        </div>
+      </li>
+
+      @else
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="/login">Login</a>
+      </li>
+      @endif
     </ul>
+    
     </div>
   </div>
 </nav>
