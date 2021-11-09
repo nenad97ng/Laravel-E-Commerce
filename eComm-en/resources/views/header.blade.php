@@ -25,7 +25,7 @@ if(Session::has('user'))
         <input name="query" class="form-control me-2 search-box" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-right ">
         <li class="nav-item">
       <a class="nav-link" href="/cartlist">Cart({{$total}})</a>
         </li>
@@ -45,6 +45,9 @@ if(Session::has('user'))
       @else
       <li class="nav-item">
         <a class="nav-link active" aria-current="page" href="/login">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="/register">Register</a>
       </li>
       @endif
     </ul>
