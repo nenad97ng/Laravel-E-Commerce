@@ -1,16 +1,21 @@
+
+/* Login View */
+/* Login Form*/
 .custom-login{
     height: 500px;
     padding-top: 300px;
 }
+
+/* Welcome View */
+/* Slider Img */
 img.slider-img{
     height: 400px !important;
 }
-.custom-product{
-    height: 600px;
-}
+/* Slider Text */
 .slider-text{
     background-color: rgba(117, 117, 117, 0.40) !important;
 }
+/* Trending Product */
 .trending-image{
     height: 100px;
 }
@@ -21,18 +26,35 @@ img.slider-img{
 .trending-wrapper{
     margin: 30px;
 }
-.detail-img{
-    height: 200px;
+
+/* Product View */
+.custom-product{
+    height: 600px;
 }
+
+/* Detail View */
+.detail-img{
+    height: 450px;
+}
+.link-back{
+    
+}
+.add-cart-btn{
+    margin: 20px 0px;
+}
+
+/* Header View */
 .search-box{
     width: 500px !important;
 }
+/* Footer View */
 .footer-bottom{
     position: relative;
     top: 200px;
     bottom: 0;
     height: 100px;
 }
+/* MyOrders View */
 .cart-list-devider{
     border-bottom: 1px solid #ccc;
     margin-bottom: 20px;
